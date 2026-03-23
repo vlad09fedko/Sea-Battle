@@ -1,3 +1,78 @@
 * {
   box-sizing: border-box;
 }
+
+.sea-battle-container {
+  width: fit-content;
+  margin: 200px auto;
+  outline: 3px solid black;
+  background:
+    linear-gradient(to right, black 1px, transparent 1px),
+    linear-gradient(to bottom, black 1px, transparent 1px);
+  background-size: 50px 50px;
+  display: grid;
+  grid-template-rows: repeat(11, 50px);
+  grid-template-columns: repeat(11, 50px);
+  grid-template-areas:
+    "q . . . . . . . . . ."
+    ". a a . b . . c c c c"
+    ". . . . b . . . . . ."
+    ". d . . b . e e e . f"
+    ". d . . . . . . . . f"
+    ". d . . . . . . . . ."
+    ". d . . . . g . . . h"
+    ". . . . . . g . . . h"
+    ". i i . . . . . . . h"
+    ". . . . . . . . . . ."
+    ". . . . . j j j j j j";
+}
+
+.corner {
+  background-color: black;
+  grid-area: q;
+}
+
+.ship {
+  outline: 2px solid black;
+}
+
+.ship:nth-child(1) {
+  background-color: #81007f;
+  grid-area: a;
+}
+.ship:nth-child(2) {
+  background-color: #00ff01;
+  grid-area: b;
+}
+.ship:nth-child(3) {
+  background-color: #0000fe;
+  grid-area: c;
+}
+.ship:nth-child(4) {
+  background-color: #0000fe;
+  grid-area: d;
+}
+.ship:nth-child(5) {
+  background-color: #00ff01;
+  grid-area: e;
+}
+.ship:nth-child(6) {
+  background-color: #81007f;
+  grid-area: f;
+}
+.ship:nth-child(7) {
+  background-color: #81007f;
+  grid-area: g;
+}
+.ship:nth-child(8) {
+  background-color: #00ff01;
+  grid-area: h;
+}
+.ship:nth-child(9) {
+  background-color: #81007f;
+  grid-area: i;
+}
+.ship:nth-child(10) {
+  background-color: #fe0000;
+  grid-area: j;
+}
