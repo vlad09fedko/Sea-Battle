@@ -3,7 +3,8 @@
 }
 
 .sea-battle-container {
-  width: fit-content;
+  height: 550px;
+  width: 550px;
   margin: 200px auto;
   outline: 3px solid black;
   font-family: Arial, Helvetica, sans-serif;
@@ -34,30 +35,45 @@
     50px 50px,
     50px 50px;
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(11, 50px);
-  grid-template-columns: repeat(11, 50px);
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 1fr 10fr;
+}
+
+.letters {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.numbers {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.ships {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   grid-template-areas:
-    "q A B C D E F G H I J"
-    ". a a . b . . c c c c"
-    ". . . . b . . . . . ."
-    ". d . . b . e e e . f"
-    ". d . . . . . . . . f"
-    ". d . . . . . . . . ."
-    ". d . . . . g . . . h"
-    ". . . . . . g . . . h"
-    ". i i . . . . . . . h"
-    ". . . . . . . . . . ."
-    ". . . . . j j j j j j";
+    "a a . b . . c c c c"
+    ". . . b . . . . . ."
+    "d . . b . e e e . f"
+    "d . . . . . . . . f"
+    "d . . . . . . . . ."
+    "d . . . . g . . . h"
+    ". . . . . g . . . h"
+    "i i . . . . . . . h"
+    ". . . . . . . . . ."
+    ". . . . j j j j j j";
 }
 
 .corner {
   background-color: black;
-  grid-area: q;
 }
 
 .letter,
-.number {
+.num {
   justify-self: center;
   align-self: center;
 }
@@ -67,74 +83,43 @@
   outline: 3px solid black;
 }
 
-.letter:nth-of-type(1) {
-  grid-area: A;
-}
-.letter:nth-of-type(2) {
-  grid-area: B;
-}
-.letter:nth-of-type(3) {
-  grid-area: C;
-}
-.letter:nth-of-type(4) {
-  grid-area: D;
-}
-.letter:nth-of-type(5) {
-  grid-area: E;
-}
-.letter:nth-of-type(6) {
-  grid-area: F;
-}
-.letter:nth-of-type(7) {
-  grid-area: G;
-}
-.letter:nth-of-type(8) {
-  grid-area: H;
-}
-.letter:nth-of-type(9) {
-  grid-area: I;
-}
-.letter:nth-of-type(10) {
-  grid-area: J;
-}
-
-.ship:nth-last-of-type(1) {
+.ship:nth-of-type(1) {
   background-color: #81007f;
   grid-area: a;
 }
-.ship:nth-last-of-type(2) {
+.ship:nth-of-type(2) {
   background-color: #00ff01;
   grid-area: b;
 }
-.ship:nth-last-of-type(3) {
+.ship:nth-of-type(3) {
   background-color: #0000fe;
   grid-area: c;
 }
-.ship:nth-last-of-type(4) {
+.ship:nth-of-type(4) {
   background-color: #0000fe;
   grid-area: d;
 }
-.ship:nth-last-of-type(5) {
+.ship:nth-of-type(5) {
   background-color: #00ff01;
   grid-area: e;
 }
-.ship:nth-last-of-type(6) {
+.ship:nth-of-type(6) {
   background-color: #81007f;
   grid-area: f;
 }
-.ship:nth-last-of-type(7) {
+.ship:nth-of-type(7) {
   background-color: #81007f;
   grid-area: g;
 }
-.ship:nth-last-of-type(8) {
+.ship:nth-of-type(8) {
   background-color: #00ff01;
   grid-area: h;
 }
-.ship:nth-last-of-type(9) {
+.ship:nth-of-type(9) {
   background-color: #81007f;
   grid-area: i;
 }
-.ship:nth-last-of-type(10) {
+.ship:nth-of-type(10) {
   background-color: #fe0000;
   grid-area: j;
 }
