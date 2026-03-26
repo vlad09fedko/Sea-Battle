@@ -35,14 +35,12 @@
     50px 50px,
     50px 50px;
   display: grid;
-  grid-auto-flow: row;
   grid-template-columns: 1fr 10fr;
   grid-template-rows: 1fr 10fr;
 }
 
 .letters {
   display: grid;
-  grid-auto-flow: row;
   grid-template-columns: repeat(10, 1fr);
 }
 
@@ -74,8 +72,8 @@
 
 .letter,
 .num {
-  justify-self: center;
-  align-self: center;
+  display: grid;
+  place-items: center;
 }
 
 .ship {
@@ -83,43 +81,46 @@
   outline: 3px solid black;
 }
 
-.ship:nth-of-type(1) {
+.purple {
   background-color: #81007f;
+}
+.green {
+  background-color: #00ff01;
+}
+.blue {
+  background-color: #0000fe;
+}
+.red {
+  background-color: #fe0000;
+}
+
+.ship:nth-of-type(1) {
   grid-area: a;
 }
 .ship:nth-of-type(2) {
-  background-color: #00ff01;
   grid-area: b;
 }
 .ship:nth-of-type(3) {
-  background-color: #0000fe;
   grid-area: c;
 }
 .ship:nth-of-type(4) {
-  background-color: #0000fe;
   grid-area: d;
 }
 .ship:nth-of-type(5) {
-  background-color: #00ff01;
   grid-area: e;
 }
 .ship:nth-of-type(6) {
-  background-color: #81007f;
   grid-area: f;
 }
 .ship:nth-of-type(7) {
-  background-color: #81007f;
   grid-area: g;
 }
 .ship:nth-of-type(8) {
-  background-color: #00ff01;
   grid-area: h;
 }
 .ship:nth-of-type(9) {
-  background-color: #81007f;
   grid-area: i;
 }
 .ship:nth-of-type(10) {
-  background-color: #fe0000;
   grid-area: j;
 }
